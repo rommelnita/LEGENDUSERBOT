@@ -59,10 +59,38 @@ async def start(event):
                     custom.Button.inline(" Rules ", data="rules"),
                     Button.url(" Support ", "https://t.me/Legend_Userbot"),
                 ],
+                [custom.Button.inline("Contact", data="contact_")],
+                [custom.Button.inline("Deploy Your LegendBot", data="deploy")],
             ],
         )
 
-
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"deploy")))
+async def help(event):
+    await event.delete()
+    if event.query.user_id is not bot.uid:
+        await tgbot.send_message(
+            event.chat_id,
+            message="You Can Deploy LegendBot In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            link_preview=False,
+            buttons=[
+                [custom.Button.inline("Deploy your LegendBot", data="fire")],
+                [Button.url("Help Me ❓", "https://t.me/LEGEND_USERBOT")],
+                [Button.url("Github Repo ❓", "github.com/LEGEND-OS/LEGENDBOT")],
+            ],
+        ) 
+        
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"fire")))
+async def help(event):
+    await event.delete()
+    if event.query.user_id is not bot.uid:
+        await tgbot.send_message(
+            event.chat_id,
+            message="🔰 Fork the Repo then follow template method given on the video.",
+            buttons=[
+                [custom.Button.inline("Back", data="osg")],
+            ],
+        )
+        
 # Data's
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
 async def help(event):
@@ -170,7 +198,7 @@ async def starkisnoob(event):
 
 @tgbot.on(events.NewMessage(pattern="^/help", func=lambda e: e.sender_id == bot.uid))
 async def starkislub(event):
-    grabonx = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /hack- hack anyone through string session \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot"
+    grabonx = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /eval - Run any async code through bot\n➤ /hack- hack anyone through string session \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot"
     await event.reply(grabonx)
 
 
