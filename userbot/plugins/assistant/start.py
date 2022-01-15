@@ -59,7 +59,6 @@ async def start(event):
                     custom.Button.inline(" Rules ", data="rules"),
                     Button.url(" Support ", "https://t.me/Legend_Userbot"),
                 ],
-                [custom.Button.inline("Contact", data="contact_")],
                 [custom.Button.inline("Deploy Your LegendBot", data="deploy")],
             ],
         )
