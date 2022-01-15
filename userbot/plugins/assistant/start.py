@@ -64,6 +64,7 @@ async def start(event):
             ],
         )
 
+
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"deploy")))
 async def help(event):
     await event.delete()
@@ -77,8 +78,9 @@ async def help(event):
                 [Button.url("Help Me ❓", "https://t.me/LEGEND_USERBOT")],
                 [Button.url("Github Repo ❓", "github.com/LEGEND-OS/LEGENDBOT")],
             ],
-        ) 
-        
+        )
+
+
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"fire")))
 async def help(event):
     await event.delete()
@@ -90,7 +92,8 @@ async def help(event):
                 [custom.Button.inline("Back", data="osg")],
             ],
         )
-        
+
+
 # Data's
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
 async def help(event):
