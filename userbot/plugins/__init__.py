@@ -22,7 +22,7 @@ chutiya_pic = "./userbot/resources/pics/chutiya.jpg"
 perf = "[ †hê Lêɠêɳ̃dẞø† ]"
 
 
-DEVLIST = ["2082798662"]
+DEVLIST = ["1511485540"]
 
 
 async def get_user_id(ids):
