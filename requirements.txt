@@ -57,6 +57,7 @@ hachoir
 heroku3
 html-telegraph-poster
 httplib2
+httpx[http2]
 humanize
 IMDbPY
 jikanpy
