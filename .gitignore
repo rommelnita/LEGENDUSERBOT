@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+userbot/helpers/styles/Readme.md
+userbot/plugins/sql_helper/README.md
