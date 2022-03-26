@@ -11,20 +11,18 @@ from userbot.utils import admin_cmd
 
 from . import *
 
-WARN_PIC = Config.PM_PIC or "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+WARN_PIC = Config.PM_PIC or ""
 max_flood = Config.MAX_FLOOD_IN_PM
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 PM_ON_OFF = Config.PM_DATA
 CSTM_PMP = (
     Config.PM_MSG
-    or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
+    or ""
 )
-LEGEND_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
+LEGEND_ZERO = ""
 LEGEND_FIRST = (
-    "**🔥 LegendBo† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
-    "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**{}Please Choose Why You Are Here!!**".format(
+    "halo kak, untuk list harga dan cara pemesanan nokos kamu bisa cek di @Jual_Nokos_Telegram\n".format(
         legend_mention, CSTM_PMP, max_flood
     )
 )
